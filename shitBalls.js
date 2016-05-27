@@ -1,0 +1,27 @@
+/*
+  When console.error doesn't quite cut the mustard.
+  Author: Stephen Cooper
+*/
+
+console.shitBalls = console.awwwShucks = console.why = console.crumptes = console.doingTheTwoFingeredPercy = (function() {
+  var entries = [
+    "Hi-Yo, Silver! Away!", "SILENCE! poopy pants.", "WHY U NO",  "Matt Damon.",
+    "trolololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololollololololololololololololololololololololololololol",
+    "Oh you pretty Chitty Bang Bang\nChitty Chitty Bang Bang we love you\nAnd our pretty Chitty Bang Bang\nChitty Chitty Bang Bang love us too\nHi ho\nEverywhere we go on Chitty Chitty we depend\nBang Bang Chitty Chitty Bang Bang\nour fine four-fendered friend\nOur fine four-fendered...\nChitty Bang Bang, Chitty Chitty Bang Bang, Chitty Bang Bang\nyeah!",
+    "ZoobyDoo\nAh\nZoobyDoo\nAh\nZoobyDoo\nAh\nZoobyDoo\nZoobyDoo\nZoobyDoo\nZoobyDoo\nZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDooZoobyDoo",
+    "SHIT THE BED",
+    "                                      ueeeeeu..^\"*$e.\n                               ur d$$$$$$$$$$$$$$Nu \"*Nu\n                             d$$$ \"$$$$$$$$$$$$$$$$$$e.\"$c\n                         u$$c   \"\"   ^\"^**$$$$$$$$$$$$$b.^R:\n                       z$$#\"\"\"           `!?$$$$$$$$$$$$$N.^\n                     .$P                   ~!R$$$$$$$$$$$$$b\n                    x$F                 **$b. '\"R).$$$$$$$$$$\n                   J^\"                           #$$$$$$$$$$$$.\n                  z$e                      ..      \"**$$$$$$$$$\n                 :$P           .        .$$$$$b.    ..  \"  #$$$$\n                 $$            L          ^*$$$$b   \"      4$$$$L\n                4$$            ^u    .e$$$$e.\"*$$$N.       @$$$$$\n                $$E            d$$$$$$$$$$$$$$L \"$$$$$  mu $$$$$$F\n                $$&            $$$$$$$$$$$$$$$$N   \"#* * ?$$$$$$$N\n                $$F            '$$$$$$$$$$$$$$$$$bec...z$ $$$$$$$$\n               '$$F             `$$$$$$$$$$$$$$$$$$$$$$$$ '$$$$E\"$\n                $$                  ^\"\"\"\"\"\"`       ^\"*$$$& 9$$$$N\n                k  u$                                  \"$$. \"$$P r\n                4$$$$L                                   \"$. eeeR\n                 $$$$$k                                   '$e. .@\n                 3$$$$$b                                   '$$$$\n                  $$$$$$                                    3$$\"\n                   $$$$$  dc                                4$F\n                    RF** <$$                                J\"\n                     #bue$$$LJ$$$Nc.\n                      ^$$$$$$$$$$$$$r\n                        `\"*$$$$$$$$$                                          ",
+    "                 | |\n             _,.-'-'-.,_\n      ______|           |______\n   ,-'      |  NINTENDO |      `-.\n ,'   _                          `.\n/   _| |_                     (^)   \\\n|  |_   _|                  (<) (>) |\n\\    |_|         (S)     (B)  (v)   /\n|`.              ___       (A)    ,'|\n|  `-.______   ,' _ `.   ______,-'  |\n|      |    `. | (_) | ,'    |      |\n|      |      \\`.___,'/      |      |\n|      !      |       |      |      |\n|      /      |       |      \\      !\n\\     /       |       |       \\     /\n `._,'        \\       /        `._,'\n               \\     /\n                `._,'"
+  ];
+  return function() {
+    var c = `color:#${(Math.random() * 0xFFFFFF << 0).toString(16)};font-size:15px;`,
+    num = Math.floor(Math.random() * (entries.length - 0) + 0);
+
+    console.log('%c\n-------------------------------', c);
+    console.log('%c' + entries[num], c.toString());
+    console[num > entries.length / 2 ? 'warn' : 'error'].apply(console, arguments);
+    console.log('%c-------------------------------', c);
+  }
+}());
+
+
